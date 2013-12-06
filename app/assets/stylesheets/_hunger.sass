@@ -1,0 +1,24 @@
+@import compass/css3
+@import compass/utilities/general/clearfix
+@import compass/reset 
+
+* 
+  +box-sizing(border-box)
+.unrated-restaurants
+  width: 200
+  float: right
+  border: 2px solid #999
+  .restaurant
+    +clearfix
+    .rating
+      float: left
+      background: coral
+      +border-radius(12px)
+      height: 24px
+      width: 24px
+      margin: 4px
+      padding: 4px
+      text-align: center
+      cursor: pointer
+      &.selected
+        background: aqua

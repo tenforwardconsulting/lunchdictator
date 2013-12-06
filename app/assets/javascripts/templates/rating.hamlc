@@ -1,0 +1,4 @@
+.restaurant
+  .name= @name
+  - for i in [0..5]
+    .rating{data: {rating: i}}= i
