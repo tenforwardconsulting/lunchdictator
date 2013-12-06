@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_restaurant, only: [:show, :edit, :update, :destroy]
 
   # GET /restaurants
@@ -61,7 +62,7 @@ class RestaurantsController < ApplicationController
     end
   end
 
-  # DELETE /restaurants/1
+  # DELETE /restaurants/
   # DELETE /restaurants/1.json
   def destroy
     @restaurant.destroy
