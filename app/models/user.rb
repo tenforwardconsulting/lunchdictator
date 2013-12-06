@@ -14,5 +14,4 @@ class User < ActiveRecord::Base
       Restaurant.where("id not in (?)", user_restaurants.pluck(:restaurant_id))
     end
   end
-
 end

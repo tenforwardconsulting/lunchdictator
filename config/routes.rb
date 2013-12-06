@@ -6,5 +6,7 @@ Lunchdictator::Application.routes.draw do
   end
   resources :lunches
 
+  get "/go_to_lunch" => "hunger#go_to_lunch"
+
   root to: 'hunger#home'
 end
