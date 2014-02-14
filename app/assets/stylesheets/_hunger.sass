@@ -4,21 +4,70 @@
 
 * 
   +box-sizing(border-box)
+
+body
+  background: #ddd
+
+.center
+  text-align: center
+.padding5
+  padding: 5px
+.padding10
+  padding: 10px
+
 .restaurants
-  width: 200
-  float: right
-  border: 2px solid #999
-  .restaurant
-    +clearfix
-    .rating
-      float: left
-      background: coral
-      +border-radius(12px)
-      height: 24px
-      width: 24px
-      margin: 4px
-      padding: 4px
-      text-align: center
-      cursor: pointer
-      &.selected
-        background: aqua
+  background-color: rgba(255, 255, 255, 0.8)
+  +border-radius(5px)
+  position: fixed
+  right: 10px
+  top: 10px
+  width: 300px
+  
+  .restaurants-header
+    background: rgba(100, 100, 100, 0.8)
+    +border-radius(5px 5px 0 0)
+    padding: 10px
+    h1
+      color: #fff
+      font-size: 28px
+      line-height: 34px
+
+  .restaurants-content
+    padding: 0 10px 10px
+    h2
+      font-size: 22px
+      line-height: 28px
+    p
+      margin-bottom: 10px
+
+    .restaurants-list
+      .restaurant
+        padding: 10px
+        +clearfix
+        .name
+          font-size: 18px
+          font-weight: bold
+          line-height: 24px
+          margin-bottom: 6px
+        .rating
+          float: left
+          background: #ccc
+          +border-radius(12px)
+          //height: 24px
+          width: 25px
+          margin-right: 5px
+          padding: 5px
+          text-align: center
+          cursor: pointer
+          &.selected
+            background: #888
+            color: #fff
+
+.new-restaurant
+  background: green
+  border: 0
+  border-radius: 3px
+  color: #fff
+  font-size: 14px
+  line-height: 16px
+  padding: 15px 20px

@@ -8,10 +8,11 @@ class LD.RestaurantsView extends Backbone.View
 
   render: =>
     @$el.html JST[@template](count: @collection.length)
+    list = @$el.find('.restaurants-list')
     @collection.each (item) =>
       view = new LD.RatingView
         model: item
-      @$el.append(view.el)
+      list.append(view.el)
       view.render()
 
   onNewRestaurantClick: ->

@@ -7,3 +7,8 @@ class LD.HungerPage
           collection: LD.Restaurants
           el: $('.restaurants')
         view.render()
+
+  @newLunch: ->
+    view = new LD.LunchView
+      el: $('.lunch')
+    view.render()
