@@ -1,4 +1,5 @@
 .restaurant
   .name= @name
   - for i in [0..5]
-    .rating{data: {rating: i}}= i
+    - selected = if (@days_per_week == i) then 'selected' else ''
+    .rating{data: {rating: i}, class: selected}= i

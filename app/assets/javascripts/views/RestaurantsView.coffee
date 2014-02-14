@@ -1,5 +1,5 @@
-class LD.UnratedRestaurantsView extends Backbone.View
-  template: 'unrated_restaurants'
+class LD.RestaurantsView extends Backbone.View
+  template: 'restaurants'
   events: 
     'click .new-restaurant': 'onNewRestaurantClick'
 
@@ -21,7 +21,7 @@ class LD.UnratedRestaurantsView extends Backbone.View
         name: name
       restaurant.save null, 
         success: ->
-            LD.UnratedRestaurants.fetch
+            LD.Restaurants.fetch
               reset: true
 
 

@@ -1,9 +1,9 @@
 class LD.HungerPage
   constructor: ->
-    LD.UnratedRestaurants = new LD.UnratedRestaurantsCollection
-    LD.UnratedRestaurants.fetch
+    LD.Restaurants = new LD.RestaurantsCollection
+    LD.Restaurants.fetch
       success: ->
-        view = new LD.UnratedRestaurantsView
-          collection: LD.UnratedRestaurants
-          el: $('.unrated-restaurants')
+        view = new LD.RestaurantsView
+          collection: LD.Restaurants
+          el: $('.restaurants')
         view.render()
