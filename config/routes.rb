@@ -8,5 +8,7 @@ Lunchdictator::Application.routes.draw do
 
   get "/go_to_lunch" => "hunger#go_to_lunch"
 
+  get "/friends" => "users#friends"
+
   root to: 'hunger#home'
 end

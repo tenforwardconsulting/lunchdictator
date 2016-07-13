@@ -1,5 +1,5 @@
-class LD.UnratedRestaurantsView extends Backbone.View
-  template: 'unrated_restaurants'
+class LD.RestaurantsView extends Backbone.View
+  template: 'restaurants'
   events: 
     'click .new-restaurant': 'onNewRestaurantClick'
 
@@ -8,10 +8,11 @@ class LD.UnratedRestaurantsView extends Backbone.View
 
   render: =>
     @$el.html JST[@template](count: @collection.length)
+    list = @$el.find('.restaurants-list')
     @collection.each (item) =>
       view = new LD.RatingView
         model: item
-      @$el.append(view.el)
+      list.append(view.el)
       view.render()
 
   onNewRestaurantClick: ->
@@ -21,7 +22,7 @@ class LD.UnratedRestaurantsView extends Backbone.View
         name: name
       restaurant.save null, 
         success: ->
-            LD.UnratedRestaurants.fetch
+            LD.Restaurants.fetch
               reset: true
 
 

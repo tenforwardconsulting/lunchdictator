@@ -1,5 +1,0 @@
-%button.new-restaurant + Restaurant
-- if @count > 0
-  %h2 Rate some restaurants!
-  %p How many days this week would you be willing to go to these restaurnts?
-.restaurants
